@@ -10,10 +10,11 @@
             font-family: 'Patrick Hand', cursive; /* Bubble-like font */
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #121212; /* Dark background */
+            color: #e0e0e0; /* Light text color */
         }
         header {
-            background: #333;
+            background: #1e1e1e; /* Darker header */
             color: #fff;
             padding: 20px 0;
             text-align: center;
@@ -21,6 +22,7 @@
         }
         h1 {
             margin: 0;
+            font-size: 2.5em;
         }
         img.header-image {
             position: absolute;
@@ -34,21 +36,25 @@
         }
         nav a {
             margin: 0 15px;
-            color: #fff;
+            color: #FFFFFF; /* Light blue for links */
             text-decoration: none;
             cursor: pointer; /* Change cursor to pointer for links */
+            transition: color 0.3s; /* Smooth color transition */
+        }
+        nav a:hover {
+            color: #FF4500; /* Color change on hover */
         }
         section {
             padding: 20px;
             margin: 10px;
-            background: #fff;
+            background: #1f1f1f; /* Dark sections */
             border-radius: 5px;
             display: none; /* Initially hidden */
         }
         footer {
             text-align: center;
             padding: 10px;
-            background: #333;
+            background: #1e1e1e; /* Dark footer */
             color: #fff;
             position: relative;
             bottom: 0;
@@ -62,7 +68,7 @@
 <body>
 
 <header>
-    <img src="file:///C:/Users/student/Pictures/Screenshots/Screenshot%202024-09-17%20150134.png" alt="Header Image" class="header-image">
+    <img src="https://th.bing.com/th/id/OIP.5h0OZzRbAEqXcB-RADOs8AHaHa?rs=1&pid=ImgDetMain" alt="Header Image" class="header-image">
     <h1>VisualsByShaan</h1>
     <nav>
         <a onclick="showSection('introduction')">Introduction</a>
@@ -109,7 +115,7 @@
     <div class="college">
         <!-- Gallery images can be added here -->
     </div>
-    <a href="http://psu.edu" target="_blank">psu.edu</a>
+    <a href="http://psu.edu" target="_blank" style="color: #87CEEB;">psu.edu</a>
 </section>
 
 <footer>
