@@ -15,7 +15,12 @@
             padding-bottom: 50px; 
         }
         header {
-            background: #1e1e1e; 
+            background: linear-gradient(149deg, #001c38, #006bff);
+            background-size: 400% 400%;
+            -webkit-animation: AnimationName 10s ease infinite;
+            -moz-animation: AnimationName 10s ease infinite;
+            -o-animation: AnimationName 10s ease infinite;
+            animation: AnimationName 10s ease infinite;
             color: #fff;
             padding: 20px 0;
             text-align: center;
@@ -69,11 +74,33 @@
             left: 0;
             bottom: 0;
             width: 100%;
-            background: #1e1e1e; 
+            background: #white;
+            
             color: #fff;
             text-align: center;
             padding: 10px 0;
             font-size: 1.2em;
+        }
+
+        @-webkit-keyframes AnimationName {
+            0% { background-position: 48% 0%; }
+            50% { background-position: 53% 100%; }
+            100% { background-position: 48% 0%; }
+        }
+        @-moz-keyframes AnimationName {
+            0% { background-position: 48% 0%; }
+            50% { background-position: 53% 100%; }
+            100% { background-position: 48% 0%; }
+        }
+        @-o-keyframes AnimationName {
+            0% { background-position: 48% 0%; }
+            50% { background-position: 53% 100%; }
+            100% { background-position: 48% 0%; }
+        }
+        @keyframes AnimationName {
+            0% { background-position: 48% 0%; }
+            50% { background-position: 53% 100%; }
+            100% { background-position: 48% 0%; }
         }
     </style>
 </head>
@@ -83,56 +110,35 @@
     <img src="https://th.bing.com/th/id/OIP.5h0OZzRbAEqXcB-RADOs8AHaHa?rs=1&pid=ImgDetMain" alt="Header Image" class="header-image">
     <h1>VisualsByShaan</h1>
     <nav>
-        <a onclick="showSection('introduction')">Introduction</a>
-        <a onclick="showSection('specifications')">Specifications</a>
-        <a onclick="showSection('features')">Features</a>
-        <a onclick="showSection('college')">College</a>
+        <a onclick="showSection('gallery')">Gallery</a>
+        <a onclick="showSection('book')">Book</a>
+        <a onclick="showSection('policy')">Policy</a>
+        <a onclick="showSection('contact')">Contact</a>
     </nav>
 </header>
 
-<section id="introduction" class="active">
-    <h2>Introduction</h2>
-    <p>The Sony 70-200mm f/2.8 G Master lens is a high-performance telephoto zoom lens designed for professional photographers and videographers. Known for its exceptional sharpness and beautiful bokeh, it is ideal for portraits, events, and wildlife photography.</p>
+<section id="gallery" class="active">
+    <h2>Gallery</h2>
+    <p>Welcome to the gallery! Here you'll find a collection of our best works, showcasing various projects and creative endeavors. Browse through our vibrant visuals and get inspired!</p>
 </section>
 
-<section id="specifications">
-    <h2>Specifications</h2>
-    <ul>
-        <li>Focal Length: 70-200mm</li>
-        <li>Aperture: f/2.8</li>
-        <li>Lens Mount: Sony E-Mount</li>
-        <li>Weight: 1480g</li>
-        <li>Dimensions: 88mm x 202mm</li>
-        <li>Image Stabilization: Yes</li>
-        <li>Weather Sealing: Yes</li>
-    </ul>
+<section id="book">
+    <h2>Book</h2>
+    <p>Interested in booking our services? Please reach out for more details about availability and pricing. We would love to help bring your visions to life!</p>
 </section>
 
-<section id="features">
-    <h2>Features</h2>
-    <p>Some notable features of the Sony 70-200mm f/2.8 lens include:</p>
-    <ul>
-        <li>Fast and silent autofocus with two Direct Drive Super Sonic wave motors.</li>
-        <li>Advanced optical design for superior clarity and contrast.</li>
-        <li>9-blade circular aperture for beautiful bokeh.</li>
-        <li>Compatible with Sony's 1.4x and 2.0x teleconverters.</li>
-        <li>Fast maximum aperture throughout the zoom range for low-light versatility.</li>
-    </ul>
-    <img src="https://th.bing.com/th/id/OIP.8nGfPJ1rvDY1hUKAP0N0iQAAAA?rs=1&pid=ImgDetMain" alt="Sony 70-200mm Lens">
-    <iframe width="420" height="315" src="https://www.youtube.com/embed/bLBvdezGBiE" frameborder="0" allowfullscreen></iframe>
+<section id="policy">
+    <h2>Policy</h2>
+    <p>Our policy focuses on transparency and excellence. We strive to maintain high standards of service and communication with all our clients. Please feel free to reach out with any questions regarding our practices.</p>
 </section>
 
-<section id="college">
-    <h2>College</h2>
-    <div class="college">
-       <img src="https://th.bing.com/th/id/R.c71a1b25e7986f75ca78597f3581fa39?rik=3SzH4a0c68bwYQ&riu=http%3a%2f%2fwww.outsidethebeltway.com%2fwp-content%2fuploads%2f2011%2f11%2fwe-are-penn-state.png&ehk=OQjhZnHvU5QTfoi%2b5IennhRWniS1Tr%2bBoqHpC%2fdzUjw%3d&risl=&pid=ImgRaw&r=0" alt="Sony 70-200mm Lens">
-    </div>
-    <a href="http://psu.edu" target="_blank" style="color: #87CEEB;">psu.edu</a>
+<section id="contact">
+    <h2>Contact</h2>
+    <p>If you'd like to get in touch with us, please email us at <a href="mailto:Visualsbyshaan@gmail.com" style="color: #87CEEB;">info@visualsbyshaan.com</a> or visit our social media channels for the latest updates.</p>
 </section>
-
 
 <div class="async-bar">
-    @asyncActivitydemo
+    @htmlstyleDevelopment
 </div>
 
 <script>
