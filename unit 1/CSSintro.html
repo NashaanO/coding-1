@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VisualsByShaan</title>
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Patrick Hand', cursive; 
+            margin: 0;
+            padding: 0;
+            background-color: #121212; 
+            color: #e0e0e0; 
+            padding-bottom: 50px; 
+        }
+        header {
+            background: linear-gradient(149deg, #001c38, #006bff);
+            background-size: 400% 400%;
+            -webkit-animation: AnimationName 10s ease infinite;
+            -moz-animation: AnimationName 10s ease infinite;
+            -o-animation: AnimationName 10s ease infinite;
+            animation: AnimationName 10s ease infinite;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            position: relative;
+        }
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        img.header-image {
+            position: absolute;
+            top: 20px; 
+            left: 20px; 
+            height: 60px; 
+            width: auto;  
+        }
+        nav {
+            margin: 20px 0;
+        }
+        nav a {
+            margin: 0 15px;
+            color: #FFFFFF; 
+            text-decoration: none;
+            cursor: pointer; 
+            transition: color 0.3s; 
+        }
+        nav a:hover {
+            color: #FF0000; 
+        }
+        section {
+            padding: 20px;
+            margin: 10px;
+            background: #1f1f1f; 
+            border-radius: 5px;
+            display: none; 
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #1e1e1e; 
+            color: #fff;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        .active {
+            display: block; 
+        }
+        .async-bar {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background: #white;
+            
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            font-size: 1.2em;
+        }
+
+        @-webkit-keyframes AnimationName {
+            0% { background-position: 48% 0%; }
+            50% { background-position: 53% 100%; }
+            100% { background-position: 48% 0%; }
+        }
+        @-moz-keyframes AnimationName {
+            0% { background-position: 48% 0%; }
+            50% { background-position: 53% 100%; }
+            100% { background-position: 48% 0%; }
+        }
+        @-o-keyframes AnimationName {
+            0% { background-position: 48% 0%; }
+            50% { background-position: 53% 100%; }
+            100% { background-position: 48% 0%; }
+        }
+        @keyframes AnimationName {
+            0% { background-position: 48% 0%; }
+            50% { background-position: 53% 100%; }
+            100% { background-position: 48% 0%; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="https://th.bing.com/th/id/OIP.5h0OZzRbAEqXcB-RADOs8AHaHa?rs=1&pid=ImgDetMain" alt="Header Image" class="header-image">
+    <h1>VisualsByShaan</h1>
+    <nav>
+        <a onclick="showSection('gallery')">Gallery</a>
+        <a onclick="showSection('book')">Book</a>
+        <a onclick="showSection('policy')">Policy</a>
+        <a onclick="showSection('contact')">Contact</a>
+    </nav>
+</header>
+
+<section id="gallery" class="active">
+    <h2>Gallery</h2>
+    <p>Welcome to the gallery! Here you'll find a collection of our best works, showcasing various projects and creative endeavors. Browse through our vibrant visuals and get inspired!</p>
+</section>
+
+<section id="book">
+    <h2>Book</h2>
+    <p>Interested in booking our services? Please reach out for more details about availability and pricing. We would love to help bring your visions to life!</p>
+</section>
+
+<section id="policy">
+    <h2>Policy</h2>
+    <p>Our policy focuses on transparency and excellence. We strive to maintain high standards of service and communication with all our clients. Please feel free to reach out with any questions regarding our practices.</p>
+</section>
+
+<section id="contact">
+    <h2>Contact</h2>
+    <p>If you'd like to get in touch with us, please email us at <a href="mailto:Visualsbyshaan@gmail.com" style="color: #87CEEB;">info@visualsbyshaan.com</a> or visit our social media channels for the latest updates.</p>
+</section>
+
+<div class="async-bar">
+    @htmlstyleDevelopment
+</div>
+
+<script>
+    function showSection(sectionId) {
+        const sections = document.querySelectorAll('section');
+        sections.forEach(section => {
+            if (section.id === sectionId) {
+                section.classList.add('active');
+            } else {
+                section.classList.remove('active');
+            }
+        });
+    }
+</script>
+
+</body>
+</html>
