@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VisualsByShaan</title>
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Patrick Hand', cursive; 
+            margin: 0;
+            padding: 0;
+            background-color: #121212; 
+            color: #e0e0e0; 
+            padding-bottom: 50px; 
+        }
+        header {
+            background: #1e1e1e; 
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            position: relative;
+        }
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        img.header-image {
+            position: absolute;
+            top: 20px; 
+            left: 20px; 
+            height: 60px; 
+            width: auto;  
+        }
+        nav {
+            margin: 20px 0;
+        }
+        nav a {
+            margin: 0 15px;
+            color: #FFFFFF; 
+            text-decoration: none;
+            cursor: pointer; 
+            transition: color 0.3s; 
+        }
+        nav a:hover {
+            color: #FF0000; 
+        }
+        section {
+            padding: 20px;
+            margin: 10px;
+            background: #1f1f1f; 
+            border-radius: 5px;
+            display: none; 
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #1e1e1e; 
+            color: #fff;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        .active {
+            display: block; 
+        }
+        .async-bar {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background: #1e1e1e; 
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="https://th.bing.com/th/id/OIP.5h0OZzRbAEqXcB-RADOs8AHaHa?rs=1&pid=ImgDetMain" alt="Header Image" class="header-image">
+    <h1>VisualsByShaan</h1>
+    <nav>
+        <a onclick="showSection('introduction')">Introduction</a>
+        <a onclick="showSection('specifications')">Specifications</a>
+        <a onclick="showSection('features')">Features</a>
+        <a onclick="showSection('college')">College</a>
+    </nav>
+</header>
+
+<section id="introduction" class="active">
+    <h2>Introduction</h2>
+    <p>The Sony 70-200mm f/2.8 G Master lens is a high-performance telephoto zoom lens designed for professional photographers and videographers. Known for its exceptional sharpness and beautiful bokeh, it is ideal for portraits, events, and wildlife photography.</p>
+</section>
+
+<section id="specifications">
+    <h2>Specifications</h2>
+    <ul>
+        <li>Focal Length: 70-200mm</li>
+        <li>Aperture: f/2.8</li>
+        <li>Lens Mount: Sony E-Mount</li>
+        <li>Weight: 1480g</li>
+        <li>Dimensions: 88mm x 202mm</li>
+        <li>Image Stabilization: Yes</li>
+        <li>Weather Sealing: Yes</li>
+    </ul>
+</section>
+
+<section id="features">
+    <h2>Features</h2>
+    <p>Some notable features of the Sony 70-200mm f/2.8 lens include:</p>
+    <ul>
+        <li>Fast and silent autofocus with two Direct Drive Super Sonic wave motors.</li>
+        <li>Advanced optical design for superior clarity and contrast.</li>
+        <li>9-blade circular aperture for beautiful bokeh.</li>
+        <li>Compatible with Sony's 1.4x and 2.0x teleconverters.</li>
+        <li>Fast maximum aperture throughout the zoom range for low-light versatility.</li>
+    </ul>
+    <img src="https://th.bing.com/th/id/OIP.8nGfPJ1rvDY1hUKAP0N0iQAAAA?rs=1&pid=ImgDetMain" alt="Sony 70-200mm Lens">
+    <iframe width="420" height="315" src="https://www.youtube.com/embed/bLBvdezGBiE" frameborder="0" allowfullscreen></iframe>
+</section>
+
+<section id="college">
+    <h2>College</h2>
+    <div class="college">
+       <img src="https://th.bing.com/th/id/R.c71a1b25e7986f75ca78597f3581fa39?rik=3SzH4a0c68bwYQ&riu=http%3a%2f%2fwww.outsidethebeltway.com%2fwp-content%2fuploads%2f2011%2f11%2fwe-are-penn-state.png&ehk=OQjhZnHvU5QTfoi%2b5IennhRWniS1Tr%2bBoqHpC%2fdzUjw%3d&risl=&pid=ImgRaw&r=0" alt="Sony 70-200mm Lens">
+    </div>
+    <a href="http://psu.edu" target="_blank" style="color: #87CEEB;">psu.edu</a>
+</section>
+
+
+<div class="async-bar">
+    @asyncActivitydemo
+</div>
+
+<script>
+    function showSection(sectionId) {
+        const sections = document.querySelectorAll('section');
+        sections.forEach(section => {
+            if (section.id === sectionId) {
+                section.classList.add('active');
+            } else {
+                section.classList.remove('active');
+            }
+        });
+    }
+</script>
+
+</body>
+</html>
