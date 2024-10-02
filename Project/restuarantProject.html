@@ -3,28 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VisualsByShaan</title>
+    <title>INDO Warriors</title>
     <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Patrick Hand', cursive; 
             margin: 0;
             padding: 0;
-            /* Added a gradient animation to the body */
-            background: linear-gradient(149deg, #006bff, #00d4ff, #006bff);
-            background-size: 400% 400%;
-            animation: AnimationName 10s ease infinite;
+            background-color: #121212; 
             color: #e0e0e0; 
             padding-bottom: 50px; 
         }
         header {
-            background: linear-gradient(149deg, #001c38, #006bff);
+            background: linear-gradient(149deg, #a34c00, ##FF0000);
             background-size: 400% 400%;
-            -webkit-animation: AnimationName 10s ease infinite; /* Keep existing animation for header */
-            -moz-animation: AnimationName 10s ease infinite;
-            -o-animation: AnimationName 10s ease infinite;
             animation: AnimationName 10s ease infinite;
-            color: #fff;
+            color: ##FF0000;
             padding: 20px 0;
             text-align: center;
             position: relative;
@@ -51,7 +45,7 @@
             transition: color 0.3s; 
         }
         nav a:hover {
-            color: #ADD8E6; 
+            color: #FF0000; 
         }
         section {
             padding: 20px;
@@ -59,6 +53,11 @@
             background: #1f1f1f; 
             border-radius: 5px;
             display: none; 
+        }
+        img.food-image {
+            max-width: 100%;
+            border-radius: 10px;
+            margin: 10px 0;
         }
         footer {
             text-align: center;
@@ -77,45 +76,58 @@
             left: 0;
             bottom: 0;
             width: 100%;
-            background: #ffffff;
-            color: #fff;
+            background: #fff;
+            color: #000;
             text-align: center;
             padding: 10px 0;
             font-size: 1.2em;
+        }
+
+        @keyframes AnimationName {
+            0% { background-position: 48% 0%; }
+            50% { background-position: 53% 100%; }
+            100% { background-position: 48% 0%; }
         }
     </style>
 </head>
 <body>
 
 <header>
-    <img src="https://th.bing.com/th/id/OIP.5h0OZzRbAEqXcB-RADOs8AHaHa?rs=1&pid=ImgDetMain" alt="Header Image" class="header-image">
-    <h1>VisualsByShaan</h1>
+    <img src="https://th.bing.com/th/id/OIP.vwUh3iapPznWQwr9eotTnQHaEc?rs=1&pid=ImgDetMain">
+    <h1>Indo Warrior</h1>
     <nav>
-        <a onclick="showSection('gallery')">Gallery</a>
-        <a onclick="showSection('book')">Book</a>
-        <a onclick="showSection('policy')">Policy</a>
-        <a onclick="showSection('contact')">Contact</a>
+        <a onclick="showSection('Cart')">cart</a>
+        <a onclick="showSection('Menu')">Menu</a>
+        <a onclick="showSection('Location')">Carrers</a>
+        <a onclick="showSection('contact')">Locations</a>
     </nav>
 </header>
 
-<section id="gallery" class="active">
-    <h2>Gallery</h2>
-    <p>Welcome to the gallery! Here you'll find a collection of our best works, showcasing various projects and creative endeavors. Browse through our vibrant visuals and get inspired!</p>
+<section id="cart" class="active">
+    <h2>Menu</h2>
+    <p>Welcome to Indo Warrior! Here you can see some of our delicious offerings, including our famous cheesesteaks!</p>
+    <img src="https://th.bing.com/th/id/OIP.epjCkCtiId4Hh-oZkANV9AHaEK?rs=1&pid=ImgDetMain" class="food-image">
 </section>
 
-<section id="book">
-    <h2>Book</h2>
-    <p>Interested in booking our services? Please reach out for more details about availability and pricing. We would love to help bring your visions to life!</p>
+<section id="menu">
+    <h2>Menu</h2>
+    <p>Explore a variety of delightful dishes crafted from the freshest ingredients. Our menu features:</p>
+    <ul>
+        <li>Classic Cheesesteaks</li>
+        <li>Veggie Wraps</li>
+        <li>Fresh Salads</li>
+        <li>Homemade Desserts</li>
+    </ul>
 </section>
 
-<section id="policy">
-    <h2>Policy</h2>
-    <p>Our policy focuses on transparency and excellence. We strive to maintain high standards of service and communication with all our clients. Please feel free to reach out with any questions regarding our practices.</p>
+<section id="Location">
+    <h2>About Us</h2>
+    <p>At Food By Shaan, we pride ourselves on providing exceptional meals with a commitment to quality and flavor. Our team is passionate about food and dedicated to serving the community!</p>
 </section>
 
-<section id="contact">
+<section id="Carrers">
     <h2>Contact</h2>
-    <p>If you'd like to get in touch with us, please email us at <a href="mailto:Visualsbyshaan@gmail.com" style="color: #87CEEB;">info@visualsbyshaan.com</a> or visit our social media channels for the latest updates.</p>
+    <p>If you'd like to get in touch with us, please email us at <a href="mailto:Visualsbyshaan@gmail.com" style="color: #87CEEB;">info@foodbyshaan.com</a> or visit our social media channels for the latest updates.</p>
 </section>
 
 <div class="async-bar">
