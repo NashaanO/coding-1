@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>INDO Warriors</title>
     <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
             font-family: 'Patrick Hand', cursive; 
@@ -15,10 +16,10 @@
             padding-bottom: 50px; 
         }
         header {
-            background: linear-gradient(149deg, #a34c00, ##FF0000);
+            background: linear-gradient(149deg, #a34c00, #FF0000);
             background-size: 400% 400%;
             animation: AnimationName 10s ease infinite;
-            color: ##FF0000;
+            color: #FF0000;
             padding: 20px 0;
             text-align: center;
             position: relative;
@@ -82,7 +83,23 @@
             padding: 10px 0;
             font-size: 1.2em;
         }
-
+        .price-box {
+            font-weight: bold;
+            color: #FFD700; 
+            margin-left: 10px;
+        }
+        .social-icons {
+            margin-top: 10px;
+        }
+        .social-icons a {
+            color: #e0e0e0;
+            margin: 0 10px;
+            font-size: 1.5em;
+            transition: color 0.3s;
+        }
+        .social-icons a:hover {
+            color: #FF0000; 
+        }
         @keyframes AnimationName {
             0% { background-position: 48% 0%; }
             50% { background-position: 53% 100%; }
@@ -93,13 +110,13 @@
 <body>
 
 <header>
-    <img src="https://th.bing.com/th/id/OIP.vwUh3iapPznWQwr9eotTnQHaEc?rs=1&pid=ImgDetMain">
+    <img src="https://th.bing.com/th/id/OIP.vwUh3iapPznWQwr9eotTnQHaEc?rs=1&pid=ImgDetMain" class="header-image">
     <h1>Indo Warrior</h1>
     <nav>
-        <a onclick="showSection('Cart')">cart</a>
-        <a onclick="showSection('Menu')">Menu</a>
-        <a onclick="showSection('Location')">Carrers</a>
-        <a onclick="showSection('contact')">Locations</a>
+        <a onclick="showSection('cart')">Cart</a>
+        <a onclick="showSection('menu')">Menu</a>
+        <a onclick="showSection('carrers')">Careers</a>
+        <a onclick="showSection('locations')">Locations</a>
     </nav>
 </header>
 
@@ -113,27 +130,40 @@
     <h2>Menu</h2>
     <p>Explore a variety of delightful dishes crafted from the freshest ingredients. Our menu features:</p>
     <ul>
-        <li>Classic Cheesesteaks</li>
-        <li>Veggie Wraps</li>
-        <li>Fresh Salads</li>
-        <li>Homemade Desserts</li>
+        <li>Nasi Goreng<span class="price-box">$9.99</span></li>
+        <li>Sate Ayam (Chicken Satay)<span class="price-box">$8.49</span></li>
+        <li>Gado-Gado Salad<span class="price-box">$7.99</span></li>
+        <li>Klepon (Sweet Rice Cake)<span class="price-box">$4.99</span></li>
     </ul>
 </section>
 
-<section id="Menu">
-    <h2>Menu</h2>
-    <p<li>Todays Menu</li>
-        <li>Garlic Herb Roasted Leg of lamb</li>
-        <li>tai satay chicken</li>
-        <li>Specials-Tupeng(w Rice)</li><li>Beef Rendang</li>
-        <li>Kue Ape</li>
-        <li>bananna leaf</li>
-        <li>Wingko</li></p>
+<section id="todays-menu">
+    <h2>Todays Menu</h2>
+    <ul>
+        <li>Garlic Herb Roasted Leg of Lamb<span class="price-box">$15.99</span></li>
+        <li>Tai Satay Chicken<span class="price-box">$12.99</span></li>
+        <li>Specials - Tupeng (w Rice)<span class="price-box">$10.50</span></li>
+        <li>Beef Rendang<span class="price-box">$14.99</span></li>
+        <li>Kue Ape<span class="price-box">$3.50</span></li>
+        <li>Banana Leaf<span class="price-box">$2.99</span></li>
+        <li>Wingko<span class="price-box">$5.00</span></li>
+    </ul>
 </section>
 
-<section id="Carrers">
+<section id="carrers">
     <h2>Contact</h2>
-    <p>If you'd like to get in touch with us, please email us at <a href="mailto:Visualsbyshaan@gmail.com" style="color: #87CEEB;">info@foodbyshaan.com</a> or visit our social media channels for the latest updates.</p>
+    <p>If you'd like to get in touch with us, please email us at <a href="mailto:indoville1@grubhub.net" style="color: #87CEEB;">indoville1@grubhub.net</a> or visit our social media channels for the latest updates.</p>
+    <div class="social-icons">
+        <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+    </div>
+</section>
+
+<section id="locations">
+    <h2>Our Location</h2>
+    <p>Visit us at:</p>
+    <p>5501 Cedar Ave, Philadelphia, PA, 19143</p>
 </section>
 
 <div class="async-bar">
