@@ -1,54 +1,49 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<style>
-.grid-container {
-  display: grid;
-  grid-template-columns: auto auto auto auto auto auto;
-  gap: 10px;
-  background-color: #2196F3;
-  padding: 10px;
-}
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); 
+            grid-template-rows: repeat(4, 100px); 
+            gap: 10px;
+            background-color: #FF0000;
+            padding: 10px;
+        }
 
-.grid-container > div {
-  background-color: rgba(255, 255, 255, 0.8);
-  text-align: center;
-  padding: 20px 0;
-  font-size: 30px;
-}
+        .grid-item {
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            padding: 20px;
+            font-size: 30px;
+            border: 1px solid #ddd; 
+        }
 
-.item2 {
-  grid-column: 2 / span 3;
-}
-</style>
+        
+        .item1 { grid-column: span 1; grid-row: span 1; }
+        .item2 { grid-column: span 2; grid-row: span 1; }
+        .item3 { grid-column: span 1; grid-row: span 2; }
+        .item4 { grid-column: span 3; grid-row: span 1; }
+        .item5 { grid-column: span 1; grid-row: span 2; }
+        .item6 { grid-column: span 1; grid-row: span 3; }
+        .item7 { grid-column: span 2; grid-row: span 2; }
+    </style>
 </head>
 <body>
 
-<h1>football Photography</h1>
-
-<p>Text <em>Players</em> property to specify where to place an item.</p>
-<p>Text</p>
+<h1>Football Photography</h1>
+<p> <em></em></p>
+<p></p>
 
 <div class="grid-container">
-  <div class="item1"></div>
-  <div class="item2"></div>
-  <div class="item3"></div>  
-  <div class="item4"></div>
-  <div class="item5"></div>
-  <div class="item6"></div>
-  <div class="item7"></div>
-  <div class="item8"></div>  
-  <div class="item9"></div>
-  <div class="item10"></div>
-  <div class="item11"></div>
-  <div class="item12"></div>
-  <div class="item13"></div>
-  <div class="item14"></div>
-  <div class="item15"></div>
-  <div class="item16"></div>
+    <div class="divrules">Box 1 style</div>
+    <div class="gridrules">Box 2 (Pic)</div>
+    <div class="gridrules3">Box 3 (Pic)</div>
+    <div class="gridrules">Box 4 (Pic)</div>
+    <div class="gridrules">Box 5 (pic)</div>
+    <div class="gridrules">Box 6 (pics)</div>
+    <div class="gridrules">Box 7 (pics)</div>
 </div>
 
 </body>
 </html>
-
-
