@@ -4,123 +4,174 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VisualsByShaan</title>
-    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet"> <!-- Optional if you want to include another similar font -->
     <style>
+        @font-face {
+            font-family: 'Arizona';
+            src: url('fonts/Arizona-Regular.ttf') format('truetype'); /* Adjust this path to where your font is stored */
+        }
+
         body {
-            font-family: 'Patrick Hand', cursive; 
+            font-family: 'Arizona', serif; /* Set your body font to Arizona */
             margin: 0;
             padding: 0;
-            /* Added a gradient animation to the body */
-            background: linear-gradient(149deg, #006bff, #00d4ff, #006bff);
-            background-size: 400% 400%;
-            animation: AnimationName 10s ease infinite;
-            color: #e0e0e0; 
-            padding-bottom: 50px; 
+            background-color: #000000; 
+            color: #ffffff; 
+            overflow-x: hidden;
         }
         header {
-            background: linear-gradient(149deg, #001c38, #006bff);
-            background-size: 400% 400%;
-            -webkit-animation: AnimationName 10s ease infinite; /* Keep existing animation for header */
-            -moz-animation: AnimationName 10s ease infinite;
-            -o-animation: AnimationName 10s ease infinite;
-            animation: AnimationName 10s ease infinite;
-            color: #fff;
+            background: #1c1c1c; 
+            color: #ffffff;
             padding: 20px 0;
             text-align: center;
-            position: relative;
         }
         h1 {
             margin: 0;
             font-size: 2.5em;
-        }
-        img.header-image {
-            position: absolute;
-            top: 20px; 
-            left: 20px; 
-            height: 60px; 
-            width: auto;  
+            font-weight: 700;
         }
         nav {
             margin: 20px 0;
         }
         nav a {
             margin: 0 15px;
-            color: #FFFFFF; 
+            color: #ffffff; 
             text-decoration: none;
-            cursor: pointer; 
+            font-weight: 700; 
             transition: color 0.3s; 
         }
         nav a:hover {
-            color: #ADD8E6; 
+            color: #cccccc; 
         }
         section {
-            padding: 20px;
+            padding: 40px 20px;
             margin: 10px;
-            background: #1f1f1f; 
+            background: #1c1c1c; 
             border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(255, 255, 255, 0.1);
             display: none; 
         }
         footer {
             text-align: center;
-            padding: 10px;
-            background: #1e1e1e; 
-            color: #fff;
+            padding: 20px;
+            background: #1c1c1c; 
+            color: #ffffff;
             position: relative;
-            bottom: 0;
             width: 100%;
         }
         .active {
             display: block; 
         }
-        .async-bar {
-            position: fixed;
-            left: 0;
-            bottom: 0;
+        .portfolio {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); 
+            gap: 15px;
+            padding: 10px;
+        }
+        .iframe-container {
             width: 100%;
-            background: #ffffff;
-            color: #fff;
-            text-align: center;
-            padding: 10px 0;
-            font-size: 1.2em;
+            overflow: hidden;
+            border-radius: 5px;
+            position: relative;
+        }
+        iframe {
+            width: 100%;
+            height: 400px; /* Adjust height as needed */
+            border: none;
+            transition: transform 0.2s, filter 0.2s;
+            filter: grayscale(100%);
+        }
+        iframe:hover {
+            transform: scale(1.05);
+            filter: grayscale(0%);
+        }
+
+        /* Open Screen Styles */
+        #open-screen {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: calc(100vh - 80px); 
+            background: url('https://drive.google.com/uc?id=1IUDBubj3mNmGCFvwK-tko5Eubf0pcy7M') no-repeat center center/cover; 
+            position: relative;
+        }
+        .open-text {
+            color: #ffffff; 
+            font-size: 3em; 
+            font-weight: bold;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); 
         }
     </style>
 </head>
 <body>
 
 <header>
-    <img src="https://th.bing.com/th/id/OIP.5h0OZzRbAEqXcB-RADOs8AHaHa?rs=1&pid=ImgDetMain" alt="Header Image" class="header-image">
     <h1>VisualsByShaan</h1>
     <nav>
-        <a onclick="showSection('gallery')">Gallery</a>
-        <a onclick="showSection('book')">Book</a>
-        <a onclick="showSection('policy')">Policy</a>
+        <a onclick="showSection('portfolio')">Gallery</a>
+        <a onclick="showSection('about')">About Me</a>
         <a onclick="showSection('contact')">Contact</a>
     </nav>
 </header>
 
-<section id="gallery" class="active">
+<section id="home" class="active">
+    <div id="open-screen">
+        <div class="open-text">Open</div>
+    </div>
+</section>
+
+<section id="about">
+    <h2>About Me</h2>
+    <p>I'm a professional photographer with a passion for capturing breathtaking moments. With years of experience in various styles, I deliver high-quality images that resonate with viewers.</p>
+</section>
+
+<section id="portfolio">
     <h2>Gallery</h2>
-    <p>Welcome to the gallery! Here you'll find a collection of our best works, showcasing various projects and creative endeavors. Browse through our vibrant visuals and get inspired!</p>
-</section>
-
-<section id="book">
-    <h2>Book</h2>
-    <p>Interested in booking our services? Please reach out for more details about availability and pricing. We would love to help bring your visions to life!</p>
-</section>
-
-<section id="policy">
-    <h2>Policy</h2>
-    <p>Our policy focuses on transparency and excellence. We strive to maintain high standards of service and communication with all our clients. Please feel free to reach out with any questions regarding our practices.</p>
+    <div class="portfolio">
+        <div class="iframe-container">
+            <iframe src="https://drive.google.com/file/d/1KwIv0xjypRgg86uVvvEmtdMRnC3y_0mf/preview" allow="autoplay"></iframe>
+        </div>
+        <div class="iframe-container">
+            <iframe src="https://drive.google.com/file/d/1r6h9xavQVN89HdTWtu6sZ3DJPWaWmqL-/preview"></iframe>
+        </div>
+        <div class="iframe-container">
+            <iframe src="https://drive.google.com/file/d/1pJBhNteBeBs7TwPJF1n9pEsNlQzhMt-0/preview"></iframe>
+        </div>
+        <div class="iframe-container">
+            <iframe src="https://drive.google.com/file/d/1bZwOnY6PHM91_YloeD668XMcxHroIeh7/preview"></iframe>
+        </div>
+        <div class="iframe-container">
+            <iframe src="https://drive.google.com/file/d/1-KCl_IuVXu8QkmcAa_EUBofkTDs5UxmY/preview"></iframe>
+        </div>
+        <div class="iframe-container">
+            <iframe src="https://drive.google.com/file/d/1Tkp-hqAPdhXFIcWo6Uxc_J05WU36VPX8/preview"></iframe>
+        </div>
+        <div class="iframe-container">
+            <iframe src="https://drive.google.com/file/d/1DzQRGgj3IyuGys18tiwf1IC2P02SDR6X/preview"></iframe>
+        </div>
+        <div class="iframe-container">
+            <iframe src="https://drive.google.com/file/d/1lGM4pBTKlndEFhMfWHVTLO0Ac4UB3qhs/preview"></iframe>
+        </div>
+        <div class="iframe-container">
+            <iframe src="https://drive.google.com/file/d/1u3VsQY0D3MTCKNN871dqTm683XG8bXOc/preview"></iframe>
+        </div>
+        <div class="iframe-container">
+            <iframe src="https://drive.google.com/file/d/1jq7bLhhXcBkbd81OsSp3axCL592rt0OP/preview"></iframe>
+        </div>
+        <div class="iframe-container">
+            <iframe src="https://drive.google.com/file/d/1B6ruXDofIIiRnKDwE3X225i-96mTIAUl/preview"></iframe>
+        </div>
+        <div class="iframe-container">
+            <iframe src="https://drive.google.com/file/d/1aXJ-MvDSZLlRjkLbPmRxj95zUFUjPkZ-/preview"></iframe>
+        </div>
+    </div>
 </section>
 
 <section id="contact">
-    <h2>Contact</h2>
-    <p>If you'd like to get in touch with us, please email us at <a href="mailto:Visualsbyshaan@gmail.com" style="color: #87CEEB;">info@visualsbyshaan.com</a> or visit our social media channels for the latest updates.</p>
+    <h2>Contact Me</h2>
+    <p>If you'd like to inquire about my work or discuss potential projects, feel free to reach out!</p>
+    <p>Email: <a href="mailto:your-email@example.com" style="color: #cccccc;">your-email@example.com</a></p>
 </section>
-
-<div class="async-bar">
-    @htmlstyleDevelopment
-</div>
 
 <script>
     function showSection(sectionId) {
