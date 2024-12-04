@@ -7,15 +7,15 @@
 // into the coding language, All we need to do is pass in data. 
 
 // examples
-var className= 'Coding class'
+var className = 'Coding class'
 console.log(className)
- 
+
 // user-defined functions- These are custom instructions written by
 // engineers to make code that performs specific tasks. 
 
 // How do we write a user-defined function?
-function exampleFunction(){
-    console.log('The function script is connected.')
+function exampleFunction() {
+  console.log('The function script is connected.')
 }
 
 // in order to have a function work, we need to call it. 
@@ -24,8 +24,15 @@ function exampleFunction(){
 
 // we access or call a function by writing its name.
 //exampleFunction()
-let accountBalance = 1000;
 
-function depositMoney() {
-  accountBalance += 200;
-  document.getElementById('data').innerHTML = `Current balance: $${accountBalance}`;
+
+function CheckCameraInventory(cams) {
+  if (cams > 0) {
+    console.log("Cams are in stock!");
+  } else {
+    console.log("Sorry, out of stock.");
+  }
+}
+
+
+CheckCameraInventory(30)

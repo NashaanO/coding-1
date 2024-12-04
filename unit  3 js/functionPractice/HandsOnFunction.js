@@ -14,3 +14,14 @@ function pizzaparty(name, topping){
 }
 
 pizzaparty('Veggies')
+
+// conditional statements are written using
+// The 'IF' and 'else' keywords. This allows
+//use to make decisions based on data
+// our function recieves
+
+
+function pizzaparty(name, topping){
+    let attendees = ['mike','stacy','april']
+if(name != guest)
+}
