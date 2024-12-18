@@ -1,0 +1,23 @@
+function discountFunction(membership, itemPrice) {
+    let discount;
+    let total;
+
+    if (membership === "superShopper") {
+        console.log('you are getting 10 percent off');
+        discount = itemPrice * 0.1;
+        total = itemPrice - discount;
+        console.log(total);
+    } else if (membership === "megaShopper") {
+        console.log('you are getting 15 percent off');
+        discount = itemPrice * 0.15;
+        total = itemPrice - discount;
+        console.log(total);
+    } else if (membership === "ultraShopper") {
+        console.log('you are getting 20 percent off');
+        discount = itemPrice * 0.2;
+        total = itemPrice - discount;
+        console.log(total);
+    } else {
+        console.log('Error: sorry, that type of membership doesn\'t exist');
+    }
+}
