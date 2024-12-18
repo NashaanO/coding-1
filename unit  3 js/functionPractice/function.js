@@ -29,10 +29,11 @@ function exampleFunction() {
 function CheckCameraInventory(cams) {
   if (cams > 0) {
     console.log("Cams are in stock!");
-  } else {
+  } else if(camsPurchased)
     console.log("Sorry, out of stock.");
   }
 }
+
 
 
 CheckCameraInventory(30)
