@@ -16,4 +16,4 @@ console.log(groceryShoppinglist)
 //.3
 
 function multiplier (x){
-    console.log (x * 293);
+    console.log (x * 293) 
