@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Called Life</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet"> <!-- Added for titles -->
+</head>
+<body>
+    <div class="game-container">
+        <header>
+            <h1>Game Called Life</h1>
+        </header>
+
+        <div class="stats-panel">
+            <h2>Your Empire</h2>
+            <div class="stat-item">
+                <span class="stat-label">Monthly Salary:</span> <span class="stat-value">$<span id="salary">3000</span></span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">Current Balance:</span> <span class="stat-value">$<span id="balance">3000</span></span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">Saved Money:</span> <span class="stat-value">$<span id="savings">0</span></span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">Month:</span> <span class="stat-value"><span id="month">1</span></span>
+            </div>
+        </div>
+
+        <div class="actions-panel">
+            <h2>Monthly Expenses</h2>
+            <div class="expense-buttons">
+                <button class="action-button expense" onclick="spend(2400)">Pay Rent - $2400</button>
+                <button class="action-button expense" onclick="spend(400)">Buy Groceries - $400</button>
+                <button class="action-button expense" onclick="spend(600)">Public Transport - $600</button>
+                <button class="action-button expense" onclick="spend(500)">Entertainment - $500</button>
+                <button class="action-button expense" onclick="spend(300)">Shopping - $300</button>
+            </div>
+
+            <div class="control-buttons">
+                <button class="action-button next-month" onclick="nextMonth()">Next Month</button>
+                <button class="action-button random-event" onclick="randomEvent()">Random Event</button>
+            </div>
+        </div>
+
+        <div class="business-panel">
+            <h2>Invest in Businesses</h2>
+            <div class="business-list">
+                <div class="business-item">
+                    <h3>Business A</h3>
+                    <p>Cost: $1000</p>
+                    <p>Generates: $200/mo</p>
+                    <p>Interest: 5% per $100 invested</p>
+                    <button class="action-button invest" onclick="invest(1000, 200)">Invest Now!</button>
+                </div>
+
+                <div class="business-item">
+                    <h3>Business B</h3>
+                    <p>Cost: $2000</p>
+                    <p>Generates: $400/mo</p>
+                    <p>Interest: 5% per $100 invested</p>
+                    <button class="action-button invest" onclick="invest(2000, 400)">Invest Now!</button>
+                </div>
+
+                <div class="business-item">
+                    <h3>Business C</h3>
+                    <p>Cost: $3000</p>
+                    <p>Generates: $600/mo</p>
+                    <p>Interest: 5% per $100 invested</p>
+                    <button class="action-button invest" onclick="invest(3000, 600)">Invest Now!</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let salary = 3000;
+        let balance = salary;
+        let savings = 0;
+        let month = 1;
+        let investments = [];
+        let totalIncome = 0;
+
+        function updateDisplay() {
+            document.getElementById("balance").textContent = balance.toFixed(2);
+            document.getElementById("savings").textContent = savings.toFixed(2);
+            document.getElementById("month").textContent = month;
+        }
+
+        function spend(amount) {
+            if (balance >= amount) {
+                balance -= amount;
+                updateDisplay();
+            } else {
+                alert("Not enough balance for this expense!");
+            }
+        }
+
+        function nextMonth() {
+            savings += balance; // Save leftover money
+            balance = salary + totalIncome; // Reset balance with new salary + income from investments
+
+            // Apply interest to savings
+            const interestRate = 0.005; // 0.5% monthly interest
+            savings += savings * interestRate;
+
+            month++;
+
+            updateDisplay();
+        }
+
+        function randomEvent() {
+            const events = [
+                { name: "Nothing happens", cost: 0 },
+                { name: "Car repair", cost: 300 },
+                { name: "Medical bill", cost: 500 },
+                { name: "House repair", cost: 400 },
+                { name: "Lost wallet", cost: 100 }
+            ];
+
+            let event = events[Math.floor(Math.random() * events.length)];
+
+            if (event.cost > 0) {
+                alert(`Random Event: ${event.name} - You lost $${event.cost}`);
+                balance -= event.cost;
+                if (balance < 0) balance = 0;
+            } else {
+                alert("Random Event: Nothing happened this time.");
+            }
+
+            updateDisplay();
+        }
+
+        function invest(cost, income) {
+            if (balance >= cost) {
+                balance -= cost;
+
+                // Calculate interest from investment
+                const interestRatePer100 = 0.05; // 5% per $100 invested
+                const numberOfHundreds = cost / 100;
+                const investmentInterest = numberOfHundreds * (100 * interestRatePer100);
+
+                totalIncome += income + investmentInterest;
+                alert(`Invested in a business! You will earn $${income} per month and an additional $${investmentInterest.toFixed(2)} in interest.`);
+                updateDisplay();
+            } else {
+                alert("Not enough balance to invest in this business!");
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,165 @@
+body {
+    font-family: 'Patrick Hand', cursive;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #195819ad, #7a4405); /* Gradient background */
+    color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; 
+    min-height: 100vh;
+    padding: 30px 0; 
+}
+
+.game-container {
+    background-color: rgba(76, 45, 7, 0.9); 
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+    text-align: center;
+    width: 95%;
+    max-width: 900px;
+    border: 3px solid #ffcc00; /* Gold border */
+}
+
+header h1 {
+    font-family: 'Bebas Neue', cursive; 
+    color: #ffcc00;
+    font-size: 4em; /* Larger title */
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+h2 {
+    font-family: 'Bebas Neue', cursive;
+    color: #ffcc00;
+    font-size: 2em;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ffcc00;
+    padding-bottom: 10px;
+    display: inline-block; 
+}
+
+.stats-panel, .actions-panel, .business-panel {
+    background-color: rgba(54, 32, 4, 0.8); 
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    border: 2px solid #864a22; /* Brown border */
+}
+
+.stats-panel {
+    text-align: left;
+}
+
+.stat-item {
+    margin: 10px 0;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.stat-label {
+    font-weight: bold;
+    color: #f0e68c; /* Khaki color for labels */
+}
+
+.stat-value {
+    color: #ffffff; /* White color for values */
+}
+
+.actions-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.expense-buttons, .control-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.action-button {
+    display: inline-block;
+    margin: 8px;
+    padding: 12px 25px;
+    font-size: 18px;
+    font-family: 'Patrick Hand', cursive;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    color: #333;
+    font-weight: bold;
+    text-transform: uppercase; /* Uppercase text */
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
+}
+
+.action-button:hover {
+    opacity: 0.9;
+    transform: translateY(-2px); /* Slight lift on hover */
+}
+
+.action-button:active {
+    transform: translateY(0); /* Press effect */
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+.expense {
+    background-color: #e74c3c; /* Red */
+    color: #ffffff;
+}
+
+.next-month {
+    background-color: #3498db; /* Blue */
+    color: #ffffff;
+}
+
+.random-event {
+    background-color: #f39c12; /* Orange */
+    color: #ffffff;
+}
+
+.invest {
+    background-color: #2ecc71; /* Green */
+    color: #ffffff;
+}
+
+.business-panel {
+    text-align: left;
+}
+
+.business-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+    gap: 20px; /* Space between business items */
+}
+
+.business-item {
+    background-color: rgba(76, 45, 7, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid #ffcc00;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    text-align: center; /* Center text in business items */
+}
+
+.business-item h3 {
+    font-family: 'Bebas Neue', cursive;
+    color: #ffcc00;
+    font-size: 1.8em;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.business-item p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+.business-item .action-button {
+    margin-top: 15px;
+}
